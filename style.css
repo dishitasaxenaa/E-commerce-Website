@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+body{
+  background-color: lavender;
+}
+
+.navbar{
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(215, 215, 250);
+}
+
+#offers{
+  color: rgb(81, 200, 81);
+  font-weight: 600;
+}
+
+.title{
+  font-family: Open Sans;
+  font-size: 1.5rem;
+}
+
+#left{
+  width: 2.3rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(138, 138, 246);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgb(151, 151, 246);
+}
+
+#right{
+  display: flex; 
+  width: 30%;
+  justify-content: right;
+  height: 1.2rem;
+  justify-content: space-evenly;
+}
+
+.navs{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.dropDown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropBtn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.dropDown-content {
+  display: none;
+  position: absolute;
+  background-color: lavender;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropContents {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropContents:hover {
+  background-color: rgb(208, 208, 248);
+}
+
+.dropDown:hover .dropDown-content {
+  display: block;
+}
+
+.imgs{
+  margin-left: 30px;
+}
+
+#img1{
+  height: 40rem;
+  width: 30rem;
+  transform: translate(15%, 10%);
+}
+
+#img2{
+  height: 30rem;
+  width: 25rem;
+  transform: translate(15%, 15%);
+}
+
+#img3{
+  height: 35rem;
+  width: 25rem;
+  transform: translate(30%, 15%);
+}
+
+#img4{
+  height: 35rem;
+  width: 20rem;
+  transform: translate(15%, 15%);
+}
+
+#img5{
+  height: 30rem;
+  transform: translate(15%, 15%);
+}
+
+#img6{
+  height: 30rem;
+  transform: translate(15%, 10%);
+}
+
+#img7{
+  height: 30rem;
+  transform: translate(15%, 10%);
+}
+
+.list{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 1140px;
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80%;
+}
+
+.item{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  font-size: 15px;
+}
+
+img{
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+.details, .intro{
+  opacity: 0;
+  pointer-events: none; 
+}
+
+.intro{
+  position: absolute;
+  top: 15vh; 
+  transform: translateY(50%);
+  width: 30vw;
+}
+
+.item:nth-child(2) .intro{
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s;
+}
+
+.item:nth-child(n+5){
+  opacity: 0;
+  pointer-events: none;
+}
+
+.item:nth-child(1)
+{
+  transform: translate(-100%, -5%) scale(1.2);
+  filter: blur(20px);
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.item:nth-child(2)
+{
+  transform: translate(0, 0);
+  filter: blur(0);
+  z-index: 4;
+  opacity: 1;
+}
+
+.item:nth-child(3)
+{
+  transform: translate(55%, 70%) scale(0.7);
+  filter: blur(10px);
+  z-index: 3;
+  opacity: 1;
+}
+
+.item:nth-child(4)
+{
+  transform: translate(100%, 110%) scale(0.4);
+  filter: blur(30px);
+  z-index: 2;
+  opacity: 1;
+}
+
+.item:nth-child(5)
+{
+  transform: translate(150%, 110%) scale(0.2);
+  filter: blur(50px);
+  z-index: 1;
+  opacity: 0;
+}
+
+.arrows{
+  position: absolute;
+  bottom: 50vh;
+  width: 100vw;
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;align-items: center;
+}
+
+#prev, #next, #back{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  border: 0.5px solid black;
+  background-color: transparent;
+}
+
+#back{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.topic{
+  font-family: sans-serif;
+  font-size: 2rem;
+  margin: 10px 0px;
+}
+
+.seeMore{
+  margin: 10px 0px;
+  width: 90px;
+  font-size: 01em;
+  background-color: transparent;
+  border: none;
+  border: 0.5px solid black;
+  border-radius: 20px;
+}
+
+button{
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(210, 210, 247);
+}
+
+.des{
+  font-size: 1em;
+}
+
+.item:nth-child(2) .intro .topic,
+.item:nth-child(2) .intro .des,
+.item:nth-child(2) .intro .seeMore{
+  opacity: 0;
+  animation: display 0.5s 0.7s ease-in-out 1 forwards;
+}
+
+@keyframes display{
+  from{
+    transform: translateY(50px );
+    filter: blur(30px);
+  }
+  to{
+    transform: translate(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.item:nth-child(2) .intro .topic{
+  animation-delay: 0.6s;
+}
+
+.item:nth-child(2) .intro .des{
+  animation-delay: 0.8s;
+}
+
+.item:nth-child(2) .intro .seeMore{
+  animation-delay: 1s;
+}
+
+.carousel.next .list .item:nth-child(1) {
+  animation: motion2 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes motion2 {
+  from{
+    transform: translate(0,0);
+    filter: blur(0);
+    z-index: 4;
+    opacity: 1;
+  }
+}
+
+.carousel.next .list .item:nth-child(2) {
+  animation: motion3 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes motion3{
+  from{
+    transform: translate(55%, 70%) scale(0.7);
+    filter: blur(10px);
+    z-index: 3;
+    opacity: 1;  
+  }
+}
+
+.carousel.next .list .item:nth-child(3) {
+  animation: motion4 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes motion4{
+  from{
+    transform: translate(100%, 110%) scale(0.4);
+    filter: blur(30px);
+    z-index: 2;
+    opacity: 1;
+  }
+}
+
+.carousel.prev .list .item:nth-child(2) {
+  animation: motion1 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes motion1{
+  from{
+    transform: translate(-100%, -5%) scale(1.2);
+    filter: blur(20px);
+    z-index: 5;
+    opacity: 0;
+  }
+}
+
+.carousel.prev .list .item:nth-child(3) {
+  animation: motion2 0.5s ease-out 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(4) {
+  animation: motion3 0.5s ease-out 1 forwards;
+}
+
+/* Showing details */
+.carousel.showDetail .list .item:nth-child(2){
+  width: 100%;
+}
+
+.carousel.showDetail .list .item{
+  transition: left 0.5s, opacity 0.5s;
+}
+.carousel.showDetail .list .item:nth-child(3), .item:nth-child(4)
+{
+  left : 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel.showDetail .list .item:nth-child(2){
+  width: 100%;
+}
+
+.carousel.showDetail .list .item:nth-child(2) .intro-content{
+  opacity: 0;
+  pointer-events: none;
+}
